@@ -59,6 +59,11 @@ public class TagAdapter<T> extends BaseAdapter implements OnInitSelectedPosition
         notifyDataSetChanged();
     }
 
+    public void remove(int position) {
+        mDataList.remove(position);
+        notifyDataSetChanged();
+    }
+
     public void clearAndAddAll(List<T> datas) {
         mDataList.clear();
         onlyAddAll(datas);

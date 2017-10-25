@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(FlowTagLayout parent, View view, int position) {
                 Snackbar.make(view, "颜色:" + parent.getAdapter().getItem(position), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                mColorTagAdapter.remove(position);
             }
         });
 
